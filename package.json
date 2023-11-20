@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -48,6 +49,7 @@
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-themes": "^7.5.3",
     "@storybook/blocks": "^7.5.3",
     "@storybook/preset-create-react-app": "^7.5.3",
     "@storybook/react": "^7.5.3",
