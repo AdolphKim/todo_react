@@ -1,9 +1,11 @@
 import { styled } from "styled-components";
 import { ReactChild } from "react";
+import { Color } from "../../theme";
 export interface Props {
   children: ReactChild;
   size?: SizeButton;
   onClick: () => void;
+  color?: Color;
 }
 
 type SizeButton = "sm" | "md" | "fit";
@@ -21,15 +23,20 @@ const sizeAdjust = (size: SizeButton) => {
   }
 };
 
-const Button = ({ onClick, children, size = "md" }: Props) => (
-  <Container onClick={onClick} size={size}>
+const Button = ({
+  onClick,
+  children,
+  size = "md",
+  color = "primary",
+}: Props) => (
+  <Container onClick={onClick} size={size} color={color}>
     <ButtonText>{children}</ButtonText>
   </Container>
 );
 
 export default Button;
 
-const Container = styled.button<{ size: SizeButton }>`
+const Container = styled.button<{ size: SizeButton; color: Color }>`
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -37,13 +44,13 @@ const Container = styled.button<{ size: SizeButton }>`
   color: white;
   border-radius: 4px;
   border: 0px;
-  background-color: ${({ theme }) => theme.color["red_500"]};
+  background-color: ${({ theme, color }) => theme.color[color]};
   height: 40px;
   width: ${({ size }) => sizeAdjust(size)};
   transition: 200ms;
   &:active {
     transform: scale(0.95);
-    background-color: ${({ theme }) => theme.color["red_100"]};
+    background-color: ${({ theme, color }) => theme.color[color + "_active"]};
   }
 `;
 
