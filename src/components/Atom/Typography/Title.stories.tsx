@@ -3,7 +3,7 @@ import Title from "./Title";
 import { Props } from "./Title";
 
 export default {
-  title: "Components/Typography/Title",
+  title: "Components/Atom/Typography/Title",
   component: Title,
   tags: ["autodocs"],
 };

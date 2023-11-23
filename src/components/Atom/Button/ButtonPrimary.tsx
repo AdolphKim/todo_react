@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { ReactChild } from "react";
-import { Color } from "../../theme";
+import { Color } from "../../../theme";
 export interface Props {
   children: ReactChild;
   size?: SizeButton;
@@ -23,7 +23,7 @@ const sizeAdjust = (size: SizeButton) => {
   }
 };
 
-const Button = ({
+const ButtonPrimary = ({
   onClick,
   children,
   size = "md",
@@ -34,7 +34,7 @@ const Button = ({
   </Container>
 );
 
-export default Button;
+export default ButtonPrimary;
 
 const Container = styled.button<{ size: SizeButton; color: Color }>`
   cursor: pointer;

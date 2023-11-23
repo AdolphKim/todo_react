@@ -1,7 +1,9 @@
 const color = {
   primary: "#205295",
   primary_active: "#0A2647",
-  text: "#AAAAAA",
+  text: "#000000",
+  text_active: "#AAAAAA",
+  background: "#ECE3CE",
 };
 
 export const theme = {
