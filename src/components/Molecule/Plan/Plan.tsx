@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Plan from "../Plan/Plan";
-import Title from "../../Atom/Typography/Title";
 
 interface subplan {
   key: number;
@@ -20,18 +18,13 @@ export interface Props {
   plans: plan[];
 }
 
-const Planpage = ({ plans }: Props) => {
+const Plan = ({ plans }: Props) => {
   return (
     <Container>
       <PlanSection>
         {plans.map((planSource) => (
           <PlanArticle>
             {planSource.title} : {planSource.body}
-            {planSource.subplan ? (
-              <Plan plans={planSource.subplan} />
-            ) : (
-              <Title>계획없음</Title>
-            )}
           </PlanArticle>
         ))}
       </PlanSection>
@@ -39,10 +32,12 @@ const Planpage = ({ plans }: Props) => {
   );
 };
 
-export default Planpage;
+export default Plan;
 
 const Container = styled.div``;
 
 const PlanSection = styled.ul``;
 
 const PlanArticle = styled.li``;
+
+const SubPlanArticle = styled.li``;

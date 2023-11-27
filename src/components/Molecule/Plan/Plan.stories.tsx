@@ -1,14 +1,14 @@
 import { Story } from "@storybook/react";
-import Planpage from "./Planpage";
-import { Props } from "./Planpage";
+import Plan from "./Plan";
+import { Props } from "./Plan";
 
 export default {
-  title: "Components/Atom/Planpage",
-  component: Planpage,
+  title: "Components/Atom/Plan",
+  component: Plan,
   tags: ["autodocs"],
 };
 
-const Template: Story<Props> = (args: Props) => <Planpage {...args} />;
+const Template: Story<Props> = (args: Props) => <Plan {...args} />;
 
 export const Default = Template.bind({});
 
